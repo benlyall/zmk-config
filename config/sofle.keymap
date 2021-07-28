@@ -12,7 +12,7 @@
 
 #define DEFAULT 0
 #define SYMBOLS 1
-£define MOVEMENT 2
+#define MOVEMENT 2
 #define FUNCTIONS 3
 #define SYSTEM 4
 
@@ -22,8 +22,8 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
+// |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BKSPC |
+// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | \     |
 // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  | PLAY  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               |     | ALT  | CTRL | GUI  |  ENTER |  | SPACE | GUI  | CTRL  | ALT   |      |
@@ -40,23 +40,23 @@
 
         symbols {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+// |       |     |     |      |      |      |                   |      |       |       |      |       |  DEL  |
 // |       |     |  -  |  (   |  )   |  _   |                   |      |       |       |      |       |       |
 // |       |     |  =  |  [   |  ]   |  +   |                   |      |       |       |      |       |       |
 // |       |     |     |  {   |  }   |      |        |  |       |      |       |       |      |       |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&trans    &trans    &trans    &trans      &trans    &trans                    &trans    &trans   &trans          &trans    &trans   &trans
-&trans    &trans    &kp MINUS &kp LPAR    &kp RPAR  &kp UNDER                 &trans    &trans   &trans          &trans    &trans   &trans
-&trans    &kp EXCL  &kp EQUAL &kp LBKT    &kp RBKT  &kp PLUS                  &trans    &trans   &trans          &trans    &trans   &trans
-&trans    &kp EQUAL &kp MINUS &kp KP_PLUS &kp LBRC  &kp RBRC  &trans   &trans &trans    &trans   &trans          &trans    &trans   &trans
-                    &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
+&trans   &trans    &trans      &trans          &trans    &trans                    &trans    &trans   &trans          &trans    &trans   &kp DEL
+&trans    &trans    &kp MINUS   &kp LPAR        &kp RPAR  &kp UNDER                 &trans    &trans   &trans          &trans    &trans   &trans
+&trans    &trans    &kp EQUAL   &kp LBKT        &kp RBKT  &kp PLUS                  &trans    &trans   &trans          &trans    &trans   &trans
+&trans    &trans    &trans      &kp LBRC        &kp RBRC  &trans    &trans   &trans &trans    &trans   &trans          &trans    &trans   &trans
+                    &trans      &trans          &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        movements {
+        movement {
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |                   | HOME | PG_UP | PG_DN |  END |       |       |

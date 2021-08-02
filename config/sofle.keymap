@@ -39,14 +39,14 @@
         };
 
         symbols {
-// ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |  DEL  |
+// ---------------------------------------------------  -------------------------------------------------------
+// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |       |     |  -  |  (   |  )   |  _   |                   |      |       |       |      |       |       |
 // |       |     |  =  |  [   |  ]   |  +   |                   |      |       |       |      |       |       |
 // |       |     |     |  {   |  }   |      |        |  |       |      |       |       |      |       |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&trans   &trans    &trans      &trans          &trans    &trans                    &trans    &trans   &trans          &trans    &trans   &kp DEL
+&trans    &trans    &trans      &trans          &trans    &trans                    &trans    &trans   &trans          &trans    &trans   &trans
 &trans    &trans    &kp MINUS   &kp LPAR        &kp RPAR  &kp UNDER                 &trans    &trans   &trans          &trans    &trans   &trans
 &trans    &trans    &kp EQUAL   &kp LBKT        &kp RBKT  &kp PLUS                  &trans    &trans   &trans          &trans    &trans   &trans
 &trans    &trans    &trans      &kp LBRC        &kp RBRC  &trans    &trans   &trans &trans    &trans   &trans          &trans    &trans   &trans
@@ -57,14 +57,14 @@
         };
 
         movement {
-// ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+// ---------------------------------------------------  -------------------------------------------------------
+// |       |     |     |      |      |      |                   |      |       |       |      |       |  DEL  |
 // |       |     |     |      |      |      |                   | HOME | PG_UP | PG_DN |  END |       |       |
 // |       |     |     |      |      |      |                   |  <   |   V   |   ^   |  >   |       |       |
 // |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&trans    &trans    &trans    &trans      &trans    &trans                    &trans    &trans    &trans    &trans    &trans   &trans
+&trans    &trans    &trans    &trans      &trans    &trans                    &trans    &trans    &trans    &trans    &trans   &kp DEL
 &trans    &trans    &trans    &trans      &trans    &trans                    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &trans   &trans
 &trans    &trans    &trans    &trans      &trans    &trans                    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans   &trans
 &trans    &trans    &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans    &trans    &trans    &trans   &trans
@@ -75,7 +75,7 @@
         };
         
         functions {
-// ------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------  -------------------------------------------------------
 // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |       |
 // |       | F11 | F12 |      |      |      |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
@@ -93,7 +93,7 @@
         };
 
         system {
-// ------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------------  ---------------------------------------------------
 // |BTCLR  | BT1   | BT2   |  BT3  |  BT4  |  BT5 |                |      |      |       |       |       |       |
 // |OUT_TOG|OUT_USB|OUT_BLE|       |       |      |                |      |      |       |       |       |       |
 // |EXTPTOG|EXTPOFF|EXPPON |       |       |      |                |      |      |       |       |       |       |
